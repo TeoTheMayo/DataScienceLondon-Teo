@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>finalMile2</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>lastMile</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7625,7 +7625,6 @@ Path to dataset files: /root/.cache/kagglehub/datasets/kkhandekar/global-sea-lev
 <div class="highlight hl-python"><pre><span></span><span class="err">!</span><span class="n">cd</span> <span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">cache</span><span class="o">/</span><span class="n">kagglehub</span><span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">berkeleyearth</span><span class="o">/</span><span class="n">climate</span><span class="o">-</span><span class="n">change</span><span class="o">-</span><span class="n">earth</span><span class="o">-</span><span class="n">surface</span><span class="o">-</span><span class="n">temperature</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mi">2</span>
 <span class="err">!</span><span class="n">ls</span> <span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">cache</span><span class="o">/</span><span class="n">kagglehub</span><span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">palinatx</span><span class="o">/</span><span class="n">mean</span><span class="o">-</span><span class="n">temperature</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">countries</span><span class="o">-</span><span class="n">by</span><span class="o">-</span><span class="n">year</span><span class="o">-</span><span class="mi">2014</span><span class="o">-</span><span class="mi">2022</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mi">3</span><span class="o">/</span><span class="n">combined_temperature</span><span class="o">.</span><span class="n">csv</span>
 
-<span class="c1"># Change directory and list files</span>
 <span class="err">!</span><span class="n">cd</span> <span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">cache</span><span class="o">/</span><span class="n">kagglehub</span><span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">kkhandekar</span><span class="o">/</span><span class="k">global</span><span class="o">-</span><span class="n">sea</span><span class="o">-</span><span class="n">level</span><span class="o">-</span><span class="mi">1993</span><span class="o">-</span><span class="mi">2021</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mi">2</span>
 <span class="err">!</span><span class="n">ls</span> <span class="o">/</span><span class="n">root</span><span class="o">/.</span><span class="n">cache</span><span class="o">/</span><span class="n">kagglehub</span><span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">kkhandekar</span><span class="o">/</span><span class="k">global</span><span class="o">-</span><span class="n">sea</span><span class="o">-</span><span class="n">level</span><span class="o">-</span><span class="mi">1993</span><span class="o">-</span><span class="mi">2021</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mi">2</span>
 </pre></div>
@@ -8033,7 +8032,6 @@ sealevel.csv
 <span class="n">display</span><span class="p">(</span><span class="n">cityTemp</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">())</span>
 <span class="n">display</span><span class="p">(</span><span class="n">cityTemp</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
 
-<span class="c1"># Filter cityTemp DataFrame (example - replace with actual filtering logic)</span>
 <span class="n">filtered_cityTemp</span> <span class="o">=</span> <span class="n">cityTemp</span><span class="p">[</span><span class="n">cityTemp</span><span class="p">[</span><span class="s1">'Year'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">2020</span><span class="p">]</span>
 
 <span class="n">display</span><span class="p">(</span><span class="n">filtered_cityTemp</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">())</span>
@@ -8661,19 +8659,14 @@ sealevel.csv
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="c1"># Load the Sea Level dataset</span>
 <span class="n">sealevel_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'/root/.cache/kagglehub/datasets/kkhandekar/global-sea-level-1993-2021/versions/2/sealevel.csv'</span><span class="p">)</span>
 <span class="n">sealevel_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">sealevel_data</span><span class="p">)</span>
 
-<span class="c1"># Display the last 5 rows to inspect the data</span>
 <span class="n">display</span><span class="p">(</span><span class="n">sealevel_data</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">())</span>
 <span class="n">display</span><span class="p">(</span><span class="n">sealevel_data</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
 
-<span class="c1"># Filter the Sea Level DataFrame (example - replace with your actual filtering logic)</span>
-<span class="c1"># Here, let's filter for records after the year 2000, assuming there is a 'Year' column</span>
-<span class="n">filtered_sealevel_data</span> <span class="o">=</span> <span class="n">sealevel_data</span><span class="p">[</span><span class="n">sealevel_data</span><span class="p">[</span><span class="s1">'Year'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">2000</span><span class="p">]</span>  <span class="c1"># Adjust 'Year' based on actual column name</span>
+<span class="n">filtered_sealevel_data</span> <span class="o">=</span> <span class="n">sealevel_data</span><span class="p">[</span><span class="n">sealevel_data</span><span class="p">[</span><span class="s1">'Year'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">2000</span><span class="p">]</span>
 
-<span class="c1"># Display the first few rows of the filtered data</span>
 <span class="n">display</span><span class="p">(</span><span class="n">filtered_sealevel_data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">())</span>
 </pre></div>
 </div>
@@ -9374,7 +9367,6 @@ sealevel.csv
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Year'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="c1"># Plot the average temperature for the coldest country</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">coldest_country_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">'Year'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'Annual Mean'</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'o'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Average Annual Temperature in </span><span class="si">{</span><span class="n">coldest_country</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
@@ -9427,26 +9419,21 @@ Russian Federation
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="c1"># Load and prepare the sea level dataset</span>
 <span class="n">sealevel_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'/root/.cache/kagglehub/datasets/kkhandekar/global-sea-level-1993-2021/versions/2/sealevel.csv'</span><span class="p">)</span>
 
-<span class="c1"># Rename columns for consistency</span>
 <span class="n">sealevel_data</span> <span class="o">=</span> <span class="n">sealevel_data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
     <span class="s1">'GMSL_noGIA'</span><span class="p">:</span> <span class="s1">'Global Mean Sea Level'</span><span class="p">,</span>
     <span class="s1">'Year'</span><span class="p">:</span> <span class="s1">'Year'</span>
 <span class="p">})</span>
 
-<span class="c1"># Load the temperature dataset</span>
 <span class="n">cityTemp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'/root/.cache/kagglehub/datasets/palinatx/mean-temperature-for-countries-by-year-2014-2022/versions/3/combined_temperature.csv'</span><span class="p">)</span>
 <span class="n">cityTemp</span> <span class="o">=</span> <span class="n">cityTemp</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'Annual Mean'</span><span class="p">:</span> <span class="s1">'Annual Temperature'</span><span class="p">})</span>
 
-<span class="c1"># Merge datasets</span>
+
 <span class="n">merged_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">cityTemp</span><span class="p">,</span> <span class="n">sealevel_data</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">'Year'</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'inner'</span><span class="p">)</span>
 
-<span class="c1"># Display the merged dataset</span>
 <span class="n">display</span><span class="p">(</span><span class="n">merged_data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 
-<span class="c1"># Existing Graph 3: Average Annual Temperature over time</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">merged_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">'Year'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'Annual Temperature'</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'o'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Average Annual Temperature Over Time'</span><span class="p">)</span>
@@ -9454,7 +9441,7 @@ Russian Federation
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Year'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="c1">#Graph43: Global Mean Sea Level Over Time</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">sealevel_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">'Year'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'Global Mean Sea Level'</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'o'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Global Mean Sea Level Over Time'</span><span class="p">)</span>
@@ -9462,7 +9449,7 @@ Russian Federation
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Year'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="c1"># Additional Graph 5: Top 5 Countries with Highest Average Temperatures</span>
+
 <span class="n">top_countries</span> <span class="o">=</span> <span class="n">merged_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'Country'</span><span class="p">)[</span><span class="s1">'Annual Temperature'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">index</span>
 <span class="n">top_countries_data</span> <span class="o">=</span> <span class="n">merged_data</span><span class="p">[</span><span class="n">merged_data</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">top_countries</span><span class="p">)]</span>
 
@@ -9474,7 +9461,6 @@ Russian Federation
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="c1"># Display summary statistics</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Summary Statistics for Merged Data:"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">merged_data</span><span class="p">[[</span><span class="s1">'Annual Temperature'</span><span class="p">,</span> <span class="s1">'Global Mean Sea Level'</span><span class="p">]]</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
 </pre></div>
@@ -9855,13 +9841,32 @@ max             29.780000              57.920000
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-python"><pre><span></span><span class="err">!</span><span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">html</span> <span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">finalMile2</span><span class="o">.</span><span class="n">ipynb</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[NbConvertApp] Converting notebook /content/finalMile2.ipynb to html
+[NbConvertApp] WARNING | Alternative text is missing on 5 image(s).
+[NbConvertApp] Writing 873965 bytes to /content/finalMile2.html
+</pre>
+</div>
 </div>
 </div>
 </div>
